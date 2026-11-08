@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f3f7fb">
+  <meta name="description" content="Luziane Rocha, Psicologia Clínica. Atendimento psicológico online. Agende seu horário.">
+
+  <title>Luziane Rocha | Psicologia Clínica</title>
+
+  <style>
+    :root {
+      --blue: #345c83;
+      --dark: #243d57;
+      --light: #f3f7fb;
+      --white: #ffffff;
+      --text: #526477;
+      --border: #e3eaf1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    .logo span {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 14px;
+      margin-left: 25px;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      background: var(--light);
+      padding: 105px 25px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .tag {
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.2;
+      font-weight: normal;
+      margin: 25px 0;
+      color: var(--dark);
+    }
+
+    .hero p {
+      max-width: 580px;
+      margin: auto;
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      background: var(--blue);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: .2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--dark);
+    }
+
+    section {
+      padding: 85px 25px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+
+    .section-title p {
+      color: var(--text);
+    }
+
+    .about {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .about p {
+      color: var(--text);
+      margin-top: 15px;
+    }
+
+    .info {
+      background: var(--light);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 22px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .form-box {
+      max-width: 650px;
+      margin: auto;
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 35px rgba(30,60,90,.05);
+    }
+
+    .form-box label {
+      display: block;
+      margin: 17px 0 7px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .form-box input,
+    .form-box select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: var(--dark);
+    }
+
+    .form-box input:focus,
+    .form-box select:focus {
+      outline: 2px solid #b6cce0;
+    }
+
+    .form-box button {
+      width: 100%;
+    }
+
+    .notice {
+      color: var(--text);
+      font-size: 12px;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      font-size: 13px;
+      opacity: .85;
+      margin-top: 4px;
+    }
+
+    footer .footer-name {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .footer-contact {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .footer-contact:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width:700px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .form-box {
+        padding: 23px;
+      }
+    }
+
+    @media(max-width:360px) {
+      nav a {
+        margin: 0 4px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      Luziane Rocha
+      <span>Psicologia Clínica</span>
+    </div>
+
+    <div>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#agendamento">Agendar</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INÍCIO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+
+      <span class="tag">Psicologia Clínica</span>
+
+      <h1>Um espaço para cuidar de você.</h1>
+
+      <p>
+        Sua saúde emocional merece atenção.
+        Encontre um espaço de acolhimento,
+        escuta e cuidado com sua história.
+      </p>
+
+      <a href="#agendamento" class="btn">
+        Agendar atendimento
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+
+      <div class="section-title">
+        <span class="tag">Conheça</span>
+        <h2>Sobre o atendimento</h2>
+      </div>
+
+      <div class="about">
+
+        <p>
+          A psicoterapia é um espaço de escuta e reflexão,
+          onde você pode compreender seus sentimentos,
+          reconhecer suas necessidades e desenvolver
+          novas formas de lidar com os desafios da vida.
+        </p>
+
+        <p>
+          Cada pessoa possui uma história única.
+          O atendimento respeita sua individualidade,
+          seu tempo e suas experiências.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ATENDIMENTO -->
+  <section class="info" id="atendimento">
+    <div class="container">
+
+      <div class="section-title">
+        <span class="tag">Informações</span>
+        <h2>Como funciona</h2>
+        <p>Conheça os detalhes do atendimento psicológico.</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Online</h3>
+          <p>
+            Atendimento psicológico realizado
+            de forma online, com privacidade
+            e comodidade.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>40 minutos</h3>
+          <p>
+            Cada sessão tem duração aproximada
+            de 40 minutos.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Horários</h3>
+          <p>
+            Segunda a sexta-feira,
+            das 13h às 22h.
+            Finais de semana sob consulta.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section id="agendamento">
+    <div class="container">
+
+      <div class="section-title">
+        <span class="tag">Agendamento</span>
+        <h2>Agende seu horário</h2>
+        <p>
+          Preencha os dados para solicitar seu atendimento.
+        </p>
+      </div>
+
+      <div class="form-box">
+
+        <form id="appointmentForm">
+
+          <label for="name">Nome completo</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Digite seu nome"
+            autocomplete="name"
+            required
+          >
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="seuemail@email.com"
+            autocomplete="email"
+            required
+          >
+
+          <label for="date">Data desejada</label>
+          <input
+            type="date"
+            id="date"
+            required
+          >
+
+          <label for="time">Horário desejado</label>
+          <select id="time" required>
+            <option value="">Selecione um horário</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00">22:00</option>
+          </select>
+
+          <label for="modality">Modalidade</label>
+          <select id="modality" required>
+            <option value="Online">Online</option>
+          </select>
+
+          <button type="submit" class="btn">
+            Solicitar agendamento pelo WhatsApp
+          </button>
+
+          <p class="notice">
+            O envio representa uma solicitação.
+            A confirmação do horário será realizada posteriormente.
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+
+  <div class="footer-name">Luziane Rocha</div>
+
+  <p>Psicologia Clínica</p>
+  <p>CRP 11/24415</p>
+
+  <a
+    class="footer-contact"
+    href="https://wa.me/5585981832015"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    WhatsApp: (85) 98183-2015
+  </a>
+
+  <p>Um espaço de acolhimento e cuidado.</p>
+
+  <p style="margin-top:20px">
+    © <span id="year"></span> Luziane Rocha.
+    Todos os direitos reservados.
+  </p>
+
+</footer>
+
+<script>
+
+// WHATSAPP DA PROFISSIONAL
+const whatsapp = "5585981832015";
+
+// DATA MÍNIMA: HOJE
+const dateInput = document.getElementById("date");
+
+const today = new Date();
+
+const localToday = new Date(
+  today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+dateInput.min = localToday;
+
+// ANO AUTOMÁTICO
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// FORMULÁRIO DE AGENDAMENTO
+document.getElementById("appointmentForm")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const date = dateInput.value;
+  const time = document.getElementById("time").value;
+  const modality = document.getElementById("modality").value;
+
+  if (!name || !email || !date || !time) {
+    alert("Preencha todos os campos.");
+    return;
+  }
+
+  const selectedDate = new Date(date + "T12:00:00");
+  const day = selectedDate.getDay();
+
+  if (day === 0 || day === 6) {
+    alert(
+      "Os atendimentos durante a semana acontecem de segunda a sexta. Consulte a disponibilidade para finais de semana."
+    );
+    return;
+  }
+
+  const message =
+`Olá, Luziane! Gostaria de solicitar um agendamento psicológico.
+
+Nome: ${name}
+E-mail: ${email}
+Data desejada: ${date.split("-").reverse().join("/")}
+Horário desejado: ${time}
+Modalidade: ${modality}
+
+Aguardo a confirmação da disponibilidade.`;
+
+  const url =
+    "https://wa.me/" + whatsapp +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
